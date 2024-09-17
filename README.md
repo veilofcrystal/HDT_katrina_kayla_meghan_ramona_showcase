@@ -1,2 +1,2 @@
-# HTD_katrina_kayla_meghan_ramona_showcase
+# HDT_katrina_kayla_meghan_ramona_showcase
 Hackathon Dream Team Repository
