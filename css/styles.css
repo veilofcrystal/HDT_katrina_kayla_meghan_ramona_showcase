@@ -1,4 +1,8 @@
 /* Reset some default styling */
+
+.hidden{
+    display: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -76,4 +80,29 @@ body {
     .nav-links li a {
         padding: 10px;
     }
+}
+
+#welcome {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: red;
+    top:-111px;
+    z-index: 1;
+    height: 222px;
+    font-size: 100px;
+    animation: welcome 2s ease-in-out forwards;
+}
+
+@keyframes welcome {
+    0% { transform: translateY(-111px); opacity: 0;}
+
+    20% { transform: translateY(0px); opacity:0.05; }
+
+    40% {transform: translateY(-40px);}
+
+    60% {transform: translateY(0px);}
+
+    80% {transform: translateY(-10px);}
+   
+    100% {transform: translateY(0px); opacity: 1;}
 }
