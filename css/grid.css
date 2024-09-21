@@ -1,7 +1,4 @@
-.f-w-g-con {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 1200px) 1fr;
-}
+
 
 .g-con {
     display: grid;
