@@ -53,6 +53,10 @@ body {
     border-radius: 5px;
 }
 
+#welcome-section {
+    width: 100%;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
     .menu-icon {
