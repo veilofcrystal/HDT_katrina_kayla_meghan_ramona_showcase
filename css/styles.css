@@ -114,7 +114,7 @@ body {
     20% { transform: translateY(0px); opacity:0.05; }
 
     40% {transform: translateY(-40px);}
-
+                                        
     60% {transform: translateY(0px);}
 
     80% {transform: translateY(-10px);}
@@ -124,13 +124,14 @@ body {
 
 #video-player {
     border: solid 3px black;
-    height: 420px;
     background-color: grey;
-    text-align: center;
     margin-top: 15px;
 }
 
 .box {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
     border: solid 3px grey;
     background-color: black;
     margin:10px;
@@ -145,10 +146,15 @@ ul {
 
 h3 {
     padding: 20px;
-    display: inline;
+    display: flex;
     text-align: center;
+    align-self: flex-start;
 }
 
+p {
+    display: flex;
+    align-self: flex-end;
+}
 footer {
     background-color: red;
     height: 700px;
