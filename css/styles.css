@@ -64,7 +64,7 @@ body {
     }
 
     .nav-links {
-        display: none; /* Initially hidden */
+        display: none; 
         flex-direction: column;
         position: absolute;
         z-index: 1;
@@ -75,8 +75,14 @@ body {
     }
 
     .nav-links.active {
-        display: flex; /* Show menu when active */
+        display: flex; 
         padding: 20px;
+        animation: fade-in 0.3s ease-in-out;
+    }
+
+    @keyframes fade-in {
+        0%{opacity:0;}
+        100%{opacity:100;}
     }
 
     .nav-links li {
