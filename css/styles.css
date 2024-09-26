@@ -55,9 +55,6 @@ body {
     border-radius: 5px;
 }
 
-#welcome-section {
-    width: 100%;
-}
 
 
 /* Mobile styles */
@@ -98,29 +95,89 @@ body {
         padding: 10px;
     }
 }
-
-#fanshawe-svg{
-    animation: svg 1s ease-in-out forwards;
-    padding:10px;
-    align-self: center;
-    margin-left: 5px;
+/*--------------------------- welcome ------------------------------*/
+#w-background {
+    background: rgb(255, 246, 246);
+    background: linear-gradient(0deg, rgb(237, 237, 237) 0%, rgb(70, 70, 70) 100%);
 }
-@keyframes svg{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+
+.w-svg {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+#welcome-section {
+    height: 900px;
+    padding-bottom: 150px;
+    margin-bottom: 100px;
+    border-bottom: 2px solid rgb(36, 36, 36);
 }
 
 #welcome {
-    top:-111px;
-    z-index: 1;
-    animation: welcome 0.5s ease-in-out forwards;
+    background-color: rgba(0, 0, 0, 0.712);
+    padding: 20px;
+    padding-top: 70px;
+    border-radius: 5px;
+    margin-top: 300px;
+    animation: welcomebox 2s ease-in-out forwards;
+    box-shadow: rgba(0, 0, 0, 0.473) 10px 10px; 
+}
+
+#w-h1 {
+    color: rgb(211, 8, 8);
+    font-size: 48px;
+    font-weight: 600;
+    animation: welcome 2s ease-in-out forwards;
+    margin-bottom: 10px;
+}
+
+#w-h2 {
+    font-size: 48px;
+    font-weight: 600;
+    animation: welcome2 2s ease-in-out forwards;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#w-h3 {
+    font-size: larger;
+    color: white;
+    animation: welcome3 2s ease-in-out forwards;
+}
+
+@keyframes welcomebox {
+    0% { transform: translateY(-115px); opacity: 0; }
+
+    100% {transform: translateY(0px); opacity: 1;}
 }
 
 @keyframes welcome {
-    0% { transform: translateY(10px); opacity: 0;}
-   
+    0% { transform: translateY(-115px); opacity: 0;}
+    10% { transform: translateY(-115px); opacity: 0;}
+
     100% {transform: translateY(0px); opacity: 1;}
 }
+
+@keyframes welcome2 {
+    0% { transform: translateY(-115px); opacity: 0;}
+    20% { transform: translateY(-115px); opacity: 0;}
+
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes welcome3 {
+    0% { transform: translateY(-115px); opacity: 0;}
+    30% { transform: translateY(-115px); opacity: 0;}
+
+    100% {transform: translateY(0px); opacity: 1;}
+
+}
+
+/*--------------------------- video ------------------------------*/
+
 
 #video-player {
     display: flex;
