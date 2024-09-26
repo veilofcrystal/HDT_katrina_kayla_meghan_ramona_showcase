@@ -160,6 +160,9 @@ font-size: 24px;
 .text {
     font-family: "Montserrat", Helvetica, sans-serif;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(0, 0, 0);
     font-size: 14px;
     }
@@ -199,7 +202,8 @@ font-size: 24px;
 }
 
 .img_placeholder {
-
+justify-content: center;
+align-items: center;
 text-align: center;
 background-color: grey;
 height: 400px;
@@ -247,7 +251,7 @@ h3 {
 footer {
     background-color: #e31f1f;
     height: 700px;
-    margin-top: 5px;
+    margin-top: 55px;
 }
 
 footer div img {
@@ -328,7 +332,7 @@ footer div img {
 }
 
 .desk_display {
-    display: block;
+    display: flex;
 }
 
     #video-player {
@@ -347,7 +351,7 @@ footer div img {
             }
     
     .img_placeholder {
-            width: 400px;
+            width: 495px;
             }
     
     .mobile_img_size {
@@ -355,33 +359,50 @@ footer div img {
             }
                 
     .tablet_img_size {
-            font-family: "Montserrat", Helvetica, sans-serif;
-            line-height: 400px;
-            color: darkgray;
-            display: block;
-            font-size: 24px;
+            display: none;
             }
+
+    .desk_img_size {
+        font-family: "Montserrat", Helvetica, sans-serif;
+        line-height: 400px;
+        color: darkgray;
+        display: block;
+        font-size: 24px;
+            }
+
+    .desk_full {
+        width: 1000px;
+    }
     
             .mobile_banner {
                 display: none;
             }
             
             .tablet_banner {
-                line-height: 100px;
-                height: 100px;
-                color: darkgray;
-                display: block;
-                font-size: 24px;
+                display: none;
             }
     
+            .desk_testimonial_img {
+                height: 200px;
+                width: 490px;
+                justify-content: center;
+                align-items: center;
+                background-color: gray;
+                color: darkgray;
+                display: flex;
+                border-radius: 20px;
+                font-size: 24px;
+            }
+
     .toggle_panel {
             height: 200px;
-            width: 340px;
+            width: 495px;
+            margin: 50px auto 5px auto;
             }
                 
     .toggle_box {
             height: 100px;
-            width: 700px;
+            width: 300px;
             }
     
     }
