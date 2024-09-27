@@ -56,7 +56,6 @@ body {
 }
 
 
-
 /* Mobile styles */
 @media (max-width: 768px) {
     .menu-icon {
@@ -178,10 +177,17 @@ body {
 
 /*--------------------------- video ------------------------------*/
 
+:root {
+    --plyr-color-main: #e2231a;
+    --plyr-control-icon-size: 30px;
+    --plyr-control-radius: 5px;
+    --plyr-control-spacing: 12px;
+  }
 
 #video-player {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     border: solid 3px black;
     background-color: grey;
     width: auto;
