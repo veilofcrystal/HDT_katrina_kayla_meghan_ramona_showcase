@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 <body>
     <header>
@@ -53,7 +54,9 @@
         <section class="g-con">
             <h2 class="hidden">video section</h2>
             <div id="video-player" class="c-span-full m-c-span-full l-c-span-full xl-c-span-full">
-                <h3>video goes here</h3>
+                <video controls preload="metadata">
+                    <source src="video/hackathon_video.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
     
@@ -236,7 +239,7 @@ experience (UX) design and interface design.
         <a href="#" id="fan-web">www.fanshawec.ca</a>
         <a id="copyright">&#169;</a>
     </footer>
-
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
     <script src="js/main.js"></script>
 </body>
 </html>
