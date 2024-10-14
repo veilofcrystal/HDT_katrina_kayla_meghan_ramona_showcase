@@ -7,6 +7,22 @@ const scheduleTwo = document.getElementById('scheduleTwo');
 const schduleThree = document.getElementById('scheduleThree');
 const player = new Plyr('video'); 
 
+const fadeElements = document.querySelectorAll('.fade-element');
+  
+const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');  // Element enters viewport
+        } else {
+          entry.target.classList.remove('visible');  // Element leaves viewport
+        }
+      });
+    });
+  
+fadeElements.forEach((element) => {
+observer.observe(element);
+    });
+  
 function toggleMenu() {
     console.log("drop down menu clicked")
     navLinks.classList.toggle('active');
@@ -52,6 +68,11 @@ function toggleSchedThree() {
     } else {
         scheduleThree.classList.add("hidden");
 }}
+=======
+function toggleMenu() {
+    console.log("drop down menu clicked")
+    navLinks.classList.toggle('active');
+}
 
 menuIcon.addEventListener('click', toggleMenu);
 whenPanel.addEventListener('click', toggleWhen);
