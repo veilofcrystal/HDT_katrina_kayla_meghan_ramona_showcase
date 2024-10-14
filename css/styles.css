@@ -478,3 +478,46 @@ footer div img {
     
     }
     
+       
+/*portfolio section*/
+#portfolio-list {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*student portfolio elements basic styling*/
+.student-name {
+    margin: 5px;
+    padding: 15px 5px 10px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    border-radius: 15px;
+    background: linear-gradient(to top, #5e2a2a, #e2231a);
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+/*student portfolio elements animations*/
+.student-name {
+    opacity: 0;
+    transform: translateX(100px); /* Start off 100px to the right */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.student-name.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide into position */
+}
+
+.student-name:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0px 2px 6px 6px rgb(255, 255, 255);
+    transition: box-shadow 0.2s ease;
+}
