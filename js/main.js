@@ -26,29 +26,28 @@ document.addEventListener('scroll', function() {
   });
   
 //javascript for carousel configuration
+const items = document.querySelectorAll('.carousel-item');
+let currentIndex = 0;
 
-let currentSlide = 0;
-const slides = document.querySelectorAll(".carousel-item");
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-    if (i === index) {
-      slide.classList.add("active");
+function showCurrentItem() {
+  items.forEach((item, index) => {
+    item.classList.remove('active'); // Remove active class from all
+    if (index === currentIndex) {
+      item.classList.add('active'); // Add active class to current item
     }
   });
 }
 
-function changeSlide(direction) {
-  currentSlide += direction;
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  } else if (currentSlide >= slides.length) {
-    currentSlide = 0;
-  }
-  showSlide(currentSlide);
-}
+// Example of how to navigate between items (next/prev buttons)
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % items.length; // Loop back to the first item
+  showCurrentItem();
+});
 
-// Show the first slide initially
-showSlide(currentSlide);
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + items.length) % items.length; // Loop back to the last item
+  showCurrentItem();
+});
 
+// Initialize the first item
+showCurrentItem();

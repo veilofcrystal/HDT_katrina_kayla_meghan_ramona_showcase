@@ -93,11 +93,6 @@ body {
     .nav-links li a {
         padding: 10px;
     }
-
-      /*for carousel */
-      .tablet-size, .desk-size {
-        display: none;
-    }
 }
 /*--------------------------- welcome ------------------------------*/
 #w-background {
@@ -309,6 +304,7 @@ img {
     height: 100px;
     color: darkgray;
     display: block;
+    align-self: center;
     font-size: 24px;
 }
 
@@ -404,11 +400,6 @@ footer div img {
         width: 700px;
         }
 
-  /*for carousel */
-  .desk-size, .mobile-size {
-    display: none;
-}
-
 }
 
 /* Desktop Styles */
@@ -491,33 +482,38 @@ footer div img {
             height: 100px;
             width: 300px;
             }
-
-    /*for carousel */
-            .tablet-size, .mobile-size {
-                display: none;
-            }
-
-            .desk-size {
-                display: block;
-            }
+          
     }
     
 /*carousel section*/
-.carousel {
+
+  .carousel {
+    display: flex;
     position: relative;
-    width: 100vw;
-    max-width: 1200px;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: auto;
+    max-width: 1300px;
+    margin: 0px 0px 20px 0px;
     overflow: hidden;
   }
   
   .carousel-item {
-    display: none;
+    display: none; /* Hide all items by default */
   }
   
   .carousel-item.active {
-    display: block;
+    display: block; /* Show only the active item */
+   
   }
+  
+  /*transition effect for smoother visibility */
+  .carousel-item {
+    transition: opacity 0.5s ease; /* Adds a fade effect when switching */
+  }
+  
   
   .prev, .next {
     position: absolute;
@@ -539,7 +535,41 @@ footer div img {
   .next {
     right: 50px;
   }
-  
+
+  /* Hide tablet and desktop images on mobile */
+.mobile-size {
+    display: block;
+}
+
+.tablet-size, .desk-size {
+    display: none;
+}
+
+/* Show tablet images on tablet sizes, hide mobile and desktop */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .mobile-size {
+        display: none;
+    }
+    
+    .tablet-size {
+        display: block;
+    }
+    
+    .desk-size {
+        display: none;
+    }
+}
+
+/* Show desktop images on large screens, hide mobile and tablet */
+@media (min-width: 1200px) {
+    .mobile-size, .tablet-size {
+        display: none;
+    }
+    
+    .desk-size {
+        display: block;
+    }
+}
 
 
 /*portfolio section*/
