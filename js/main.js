@@ -9,7 +9,7 @@ function toggleMenu() {
 
 menuIcon.addEventListener('click', toggleMenu);
 
-//javascript for list
+//javascript for portfolio list
 
 document.addEventListener('scroll', function() {
     const listItems = document.querySelectorAll('.student-name');
@@ -25,3 +25,30 @@ document.addEventListener('scroll', function() {
     });
   });
   
+//javascript for carousel configuration
+
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-item");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) {
+      slide.classList.add("active");
+    }
+  });
+}
+
+function changeSlide(direction) {
+  currentSlide += direction;
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  } else if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+  showSlide(currentSlide);
+}
+
+// Show the first slide initially
+showSlide(currentSlide);
+
