@@ -558,6 +558,7 @@ footer div img {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    align-items: center;
     width: 300px;
     height: 100px;
     border-radius: 15px;
