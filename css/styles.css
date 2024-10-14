@@ -264,15 +264,19 @@ font-size: 24px;
     margin: 5px auto 5px auto;
 }
 
+img {
+    border-radius: 20px;
+}
+
 .img_placeholder {
-justify-content: center;
-align-items: center;
-text-align: center;
-background-color: grey;
-height: 400px;
-width: 400px;
-border-radius: 20px;
-margin: 5px auto 5px auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: grey;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    margin: 5px auto 5px auto;
 }
 
 .mobile_img_size {
@@ -331,6 +335,10 @@ footer div img {
 
     /* Tablet Styles!!!!!!!!!!!!!! */
 @media (min-width: 768px) {
+
+.tablet_hidden {
+    display: none;
+}
 
 #video-player {
     height: 394px;
