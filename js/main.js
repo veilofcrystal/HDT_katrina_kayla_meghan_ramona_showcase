@@ -5,7 +5,10 @@ const whereContent = document.getElementById('whereContent');
 const scheduleOne = document.getElementById('scheduleOne');
 const scheduleTwo = document.getElementById('scheduleTwo');
 const schduleThree = document.getElementById('scheduleThree');
+<<<<<<< Updated upstream
 const player = new Plyr('video'); 
+=======
+>>>>>>> Stashed changes
 
 const fadeElements = document.querySelectorAll('.fade-element');
   
@@ -28,6 +31,7 @@ function toggleMenu() {
     navLinks.classList.toggle('active');
 }
 
+<<<<<<< Updated upstream
 function toggleWhen() {
     console.log("when clicked")
     if (whenContent.classList.contains("hidden")) {
@@ -73,6 +77,7 @@ function toggleMenu() {
     console.log("drop down menu clicked")
     navLinks.classList.toggle('active');
 }
+>>>>>>> Stashed changes
 
 menuIcon.addEventListener('click', toggleMenu);
 whenPanel.addEventListener('click', toggleWhen);
