@@ -642,8 +642,12 @@ footer div img {
 
 .fade-element.visible {
     opacity: 1;
+  }
+  
+#shrishti-video {
+    align-items: center;
+    text-align: center;
 }
-
 
 /* --- indusrty night event section --- */
 #industry-night {
@@ -658,3 +662,4 @@ footer div img {
 .ind-box-shad:hover {
     box-shadow: none;
 }
+
