@@ -107,15 +107,22 @@ body {
 
 .w-svg {
     position: absolute;
-    width: 800px;
-    height: 800px;
-    padding-top: 50px;
-    padding-left: 50px;
+    width: 900px;
+    height: 900px;
+    padding-left: 10px;
 }
 
+
 #fanshawe-svg{
-    width: 80vw;
-    height: 80vh;
+    width: 95vw;
+    height: 95vh;
+    animation: spin-wsvg 500s linear infinite;
+}
+
+
+@keyframes spin-wsvg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 #welcome-section {
@@ -334,23 +341,38 @@ h3 {
 
 footer {
     background-color: #e31f1f;
-    height: 100px;
+    height: 220px;
     margin-top: 55px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer div img {
-    width: 50px;
+    width: 60px;
+    margin: 10px;
 }
 
-
-#fan-web, #copyright{
+.fan-web, #copyright{
     display: block;
     text-align: center;
     text-decoration: none;
     color: white;
 }
 
-    /* Tablet Styles!!!!!!!!!!!!!! */
+.fan-web img {
+    width: 60px;
+    margin: 10px;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+/* Tablet Styles!!!!!!!!!!!!!! */
 @media (min-width: 768px) {
 
 .tablet_hidden {
@@ -414,6 +436,7 @@ footer div img {
   .desk-size, .mobile-size {
     display: none;
 }
+
 
 }
 
