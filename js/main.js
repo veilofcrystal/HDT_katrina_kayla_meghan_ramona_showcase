@@ -1,24 +1,13 @@
 const navLinks = document.querySelector('#navLinks');
 const menuIcon = document.querySelector('#menuIcon');
 const player = new Plyr('video'); 
+
+function toggleMenu() {
+    console.log("drop down menu clicked")
+    navLinks.classList.toggle('active');
+}
+
 menuIcon.addEventListener('click', toggleMenu);
-const fadeElements = document.querySelectorAll('.fade-element');
-const exemptElements = document.querySelectorAll('header, footer'); 
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible'); 
-      } else {
-        entry.target.classList.remove('visible'); 
-      }
-    });
-  });
-
-  fadeElements.forEach((element) => {
-    observer.observe(element);
-  });
-
 
 //javascript for portfolio list
 
@@ -37,28 +26,28 @@ document.addEventListener('scroll', function() {
   });
   
 //javascript for carousel configuration
-const items = document.querySelectorAll('.carousel-item');
-let currentIndex = 0;
 
-function showCurrentItem() {
-  items.forEach((item, index) => {
-    item.classList.remove('active'); // Remove active class from all
-    if (index === currentIndex) {
-      item.classList.add('active'); // Add active class to current item
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-item");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) {
+      slide.classList.add("active");
     }
   });
 }
 
-// Example of how to navigate between items (next/prev buttons)
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % items.length; // Loop back to the first item
-  showCurrentItem();
-});
+function changeSlide(direction) {
+  currentSlide += direction;
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  } else if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+  showSlide(currentSlide);
+}
 
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + items.length) % items.length; // Loop back to the last item
-  showCurrentItem();
-});
-
-// Initialize the first item
-showCurrentItem();
+// Show the first slide initially
+showSlide(currentSlide);

@@ -12,16 +12,6 @@
     box-sizing: border-box;
 }
 
-.fade-element {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-.fade-element.visible {
-    opacity: 1;
-  }
-  
-
 body {
     font-family: "Montserrat", sans-serif;
     background-color: rgb(237, 237, 237);/*change back to white if you prefer*/
@@ -102,6 +92,11 @@ body {
 
     .nav-links li a {
         padding: 10px;
+    }
+
+      /*for carousel */
+      .tablet-size, .desk-size {
+        display: none;
     }
 }
 /*--------------------------- welcome ------------------------------*/
@@ -261,7 +256,6 @@ font-size: 24px;
     width: 190px;
     background-color: lightgrey;
     display: flex;
-    flex-direction: column;
     align-items: center;
     border-radius: 20px;
     justify-content: center;
@@ -275,7 +269,6 @@ font-size: 24px;
     width: 400px;
     background-color: lightgrey;
     display: flex;
-    flex-direction: column;
     align-items: center;
     border-radius: 20px;
     justify-content: center;
@@ -316,7 +309,6 @@ img {
     height: 100px;
     color: darkgray;
     display: block;
-    align-self: center;
     font-size: 24px;
 }
 
@@ -412,6 +404,11 @@ footer div img {
         width: 700px;
         }
 
+  /*for carousel */
+  .desk-size, .mobile-size {
+    display: none;
+}
+
 }
 
 /* Desktop Styles */
@@ -494,38 +491,33 @@ footer div img {
             height: 100px;
             width: 300px;
             }
-          
+
+    /*for carousel */
+            .tablet-size, .mobile-size {
+                display: none;
+            }
+
+            .desk-size {
+                display: block;
+            }
     }
     
 /*carousel section*/
-
-  .carousel {
-    display: flex;
+.carousel {
     position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 20px;
-    padding: auto;
-    max-width: 1300px;
-    margin: 0px 0px 20px 0px;
+    width: 100vw;
+    max-width: 1200px;
+    margin: auto;
     overflow: hidden;
   }
   
   .carousel-item {
-    display: none; /* Hide all items by default */
+    display: none;
   }
   
   .carousel-item.active {
-    display: block; /* Show only the active item */
-   
+    display: block;
   }
-  
-  /*transition effect for smoother visibility */
-  .carousel-item {
-    transition: opacity 0.5s ease; /* Adds a fade effect when switching */
-  }
-  
   
   .prev, .next {
     position: absolute;
@@ -547,41 +539,7 @@ footer div img {
   .next {
     right: 50px;
   }
-
-  /* Hide tablet and desktop images on mobile */
-.mobile-size {
-    display: block;
-}
-
-.tablet-size, .desk-size {
-    display: none;
-}
-
-/* Show tablet images on tablet sizes, hide mobile and desktop */
-@media (min-width: 768px) and (max-width: 1199px) {
-    .mobile-size {
-        display: none;
-    }
-    
-    .tablet-size {
-        display: block;
-    }
-    
-    .desk-size {
-        display: none;
-    }
-}
-
-/* Show desktop images on large screens, hide mobile and tablet */
-@media (min-width: 1200px) {
-    .mobile-size, .tablet-size {
-        display: none;
-    }
-    
-    .desk-size {
-        display: block;
-    }
-}
+  
 
 
 /*portfolio section*/
@@ -600,7 +558,6 @@ footer div img {
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    align-items: center;
     width: 300px;
     height: 100px;
     border-radius: 15px;
