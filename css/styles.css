@@ -116,7 +116,7 @@ body {
 #fanshawe-svg{
     width: 95vw;
     height: 95vh;
-    animation: spin-wsvg 500s linear infinite;
+    animation: spin-wsvg 200s linear infinite;
 }
 
 
@@ -138,7 +138,7 @@ body {
     padding-top: 70px;
     border-radius: 5px;
     margin-top: 300px;
-    animation: welcomebox 2s ease-in-out forwards;
+    animation: welcomebox 1s ease-in-out forwards;
     box-shadow: rgba(0, 0, 0, 0.473) 10px 10px; 
 }
 
