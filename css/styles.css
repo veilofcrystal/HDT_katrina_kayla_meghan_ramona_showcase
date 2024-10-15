@@ -12,6 +12,16 @@
     box-sizing: border-box;
 }
 
+.fade-element {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+.fade-element.visible {
+    opacity: 1;
+  }
+  
+
 body {
     font-family: "Montserrat", sans-serif;
     background-color: rgb(237, 237, 237);/*change back to white if you prefer*/
