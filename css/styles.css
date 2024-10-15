@@ -344,7 +344,6 @@ footer {
     height: 220px;
     margin-top: 55px;
     align-items: center;
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
