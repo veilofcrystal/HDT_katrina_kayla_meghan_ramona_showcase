@@ -510,10 +510,15 @@ footer div img {
     
 /*carousel section*/
 .carousel {
+    display: flex;
     position: relative;
-    width: 100vw;
-    max-width: 1200px;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: auto;
+    max-width: 1300px;
+    margin: 0px 0px 30px 0px;
     overflow: hidden;
   }
   
@@ -524,6 +529,12 @@ footer div img {
   .carousel-item.active {
     display: block;
   }
+
+    /*transition effect for smoother visibility */
+    .carousel-item {
+        transition: opacity 0.5s ease; /* Adds a fade effect when switching */
+      }
+    
   
   .prev, .next {
     position: absolute;
