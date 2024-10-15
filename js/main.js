@@ -9,6 +9,25 @@ function toggleMenu() {
 
 menuIcon.addEventListener('click', toggleMenu);
 
+
+
+const fadeElements = document.querySelectorAll('.fade-element');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible'); 
+      } else {
+        entry.target.classList.remove('visible'); 
+      }
+    });
+  });
+
+
+  fadeElements.forEach((element) => {
+    observer.observe(element);
+  });
+
 //javascript for portfolio list
 
 document.addEventListener('scroll', function() {
