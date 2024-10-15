@@ -372,6 +372,11 @@ footer div img {
     margin-top: 5px;
 }
 
+#shrishti-video {
+    width: 300px;
+    height: 169px;
+}
+
 /* Tablet Styles!!!!!!!!!!!!!! */
 @media (min-width: 768px) {
 
@@ -430,6 +435,11 @@ footer div img {
 .toggle_box {
         height: 100px;
         width: 700px;
+        }
+
+        #shrishti-video {
+            width: 700px;
+            height: 394px;
         }
 
   /*for carousel */
@@ -528,6 +538,11 @@ footer div img {
 
             .desk-size {
                 display: block;
+            }
+
+            #shrishti-video {
+                width: 1000px;
+                height: 563px;
             }
     }
     
@@ -644,7 +659,7 @@ footer div img {
     opacity: 1;
   }
   
-#shrishti-video {
+#mem-vid-con {
     align-items: center;
     text-align: center;
 }
