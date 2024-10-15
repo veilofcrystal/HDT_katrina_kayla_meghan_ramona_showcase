@@ -70,3 +70,15 @@ function changeSlide(direction) {
 
 // Show the first slide initially
 showSlide(currentSlide);
+
+setInterval(() => {
+  changeSlide(1);
+}, 5000); // Change slide every 5 seconds
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') {
+    changeSlide(1); // Next slide
+  } else if (e.key === 'ArrowLeft') {
+    changeSlide(-1); // Previous slide
+  }
+});
