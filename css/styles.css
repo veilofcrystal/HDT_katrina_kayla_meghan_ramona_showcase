@@ -98,6 +98,10 @@ body {
       .tablet-size, .desk-size {
         display: none;
     }
+
+    .testimonial-desk-size, .testimonial-tablet-size {
+        display: none;
+    }
 }
 /*--------------------------- welcome ------------------------------*/
 #w-background {
@@ -446,6 +450,9 @@ footer div section img {
     display: none;
 }
 
+.testimonial-desk-size, .testimonial-mobile-size {
+    display: none;
+}
 }
 
 /* Desktop Styles */
@@ -506,17 +513,7 @@ footer div section img {
                 display: none;
             }
     
-            .desk_testimonial_img {
-                height: 200px;
-                width: 490px;
-                justify-content: center;
-                align-items: center;
-                background-color: gray;
-                color: darkgray;
-                display: flex;
-                border-radius: 20px;
-                font-size: 24px;
-            }
+
 
     .toggle_panel {
             height: 200px;
@@ -541,6 +538,15 @@ footer div section img {
             #shrishti-video {
                 width: 1000px;
                 height: 563px;
+            }
+
+            .testimonial-mobile-size, .testimonial-tablet-size {
+                display: none;
+            }
+
+            .testimonial-desk-size{
+                display: block;
+                align-self: center;
             }
     }
     
@@ -676,10 +682,22 @@ footer div section img {
     box-shadow: none;
 }
 
+
+/* testimonial carousel */
+
+.testimonial-box {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px 10px 0px;
+
+}
+
 .carousel-item-test {
+    margin-top: 30px;
     display: none;
   }
   
   .carousel-item-test.active {
+    margin-top: 30px;
     display: block;
   }

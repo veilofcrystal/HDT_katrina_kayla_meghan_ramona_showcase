@@ -114,5 +114,5 @@ showTestSlide(currentTestSlide);
 // Automatically change the testimonial slide every 5 seconds
 setInterval(() => {
   changeTestSlide(1);
-}, 5000); // Adjust the timing as needed
+}, 8000); // Adjust the timing as needed
 
