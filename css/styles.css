@@ -69,7 +69,18 @@ body {
     box-shadow: 2px 3px rgba(0, 0, 0, 0.473);
     display: none;
     z-index: 1000;
+   
 }
+
+
+#scrollToTopBtn:hover{
+    animation: scale 3s forwards ease infinite;
+}
+
+@keyframes scale {
+    50% {transform: scale(1.2)};
+}
+
 
 /* Mobile styles */
 @media (max-width: 768px) {
