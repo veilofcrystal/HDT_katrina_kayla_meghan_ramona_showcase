@@ -81,54 +81,6 @@ body {
     50% {transform: scale(1.2)};
 }
 
-
-/* Mobile styles */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .nav-links {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        z-index: 1;
-        top: 60px;
-        right: 0;
-        width: 250px;
-        border-radius: 5px;
-        background-color: #e31f1f;
-    }
-
-    .nav-links.active {
-        display: flex; 
-        padding: 20px;
-        animation: fade-in 0.3s ease-in-out;
-    }
-
-    @keyframes fade-in {
-        0%{opacity:0;}
-        100%{opacity:100;}
-    }
-
-    .nav-links li {
-        text-align: left;
-        padding-right: 20px;
-    }
-
-    .nav-links li a {
-        padding: 10px;
-    }
-
-      /*for carousel */
-      .tablet-size, .desk-size {
-        display: none;
-    }
-
-    .testimonial-desk-size, .testimonial-tablet-size {
-        display: none;
-    }
-}
 /*--------------------------- welcome ------------------------------*/
 #w-background {
     background: rgb(255, 246, 246);
@@ -137,15 +89,11 @@ body {
 
 .w-svg {
     position: absolute;
-    width: 900px;
-    height: 900px;
-    padding-left: 10px;
 }
-
 
 #fanshawe-svg{
     width: 95vw;
-    height: 95vh;
+    height: 900px;
     animation: spin-wsvg 200s linear infinite;
 }
 
@@ -406,6 +354,61 @@ footer div section img {
     height: 169px;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        border-radius: 5px;
+        background-color: #e31f1f;
+    }
+
+    .nav-links.active {
+        display: flex; 
+        padding: 20px;
+        animation: fade-in 0.3s ease-in-out;
+    }
+
+    @keyframes fade-in {
+        0%{opacity:0;}
+        100%{opacity:100;}
+    }
+
+    .nav-links li {
+        text-align: left;
+        padding-right: 20px;
+    }
+
+    .nav-links li a {
+        padding: 10px;
+    }
+
+      /*for carousel */
+      .tablet-size, .desk-size {
+        display: none;
+    }
+
+    .testimonial-desk-size, .testimonial-tablet-size {
+        display: none;
+    }
+    
+    #fanshawe-svg{
+        width: 95vw;
+        height: 50vw;
+        animation: spin-wsvg 200s linear infinite;
+    }
+    
+}
+
 /* Tablet Styles!!!!!!!!!!!!!! */
 @media (min-width: 768px) {
 
@@ -574,6 +577,12 @@ footer div section img {
                 display: block;
                 align-self: center;
             }
+
+        .w-svg {
+            position: absolute;
+            right: 200px;
+        }
+
     }
     
 /*carousel section*/
