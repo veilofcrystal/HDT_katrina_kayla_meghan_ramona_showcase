@@ -676,3 +676,10 @@ footer div section img {
     box-shadow: none;
 }
 
+.carousel-item-test {
+    display: none;
+  }
+  
+  .carousel-item-test.active {
+    display: block;
+  }
