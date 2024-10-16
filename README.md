@@ -19,8 +19,6 @@ Push to the branch: git push origin dev.yourinitials.script-what-change-you-made
 Submit a pull request & merge to main
 
 
-TODO: Write history
-
 Credits
 
 Katrina Mcadams
