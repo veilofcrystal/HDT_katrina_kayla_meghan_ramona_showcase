@@ -1,5 +1,7 @@
 # HDT_katrina_kayla_meghan_ramona_showcase
+
 ## Hackathon Dream Team 
+
 
 Team members: Katrina, Kayla, Meghan and Ramona.
 
@@ -20,10 +22,10 @@ no intallation required
 ## Contribing
 
 1.Fork it!
-2.Create your feature branch:
-3.Commit you change
-4.Push to the branch
-%.submit a pull request
+2.Create your feature branch: git checkout
+3.Commit you change: git commit 
+4.Push to the branch: git push origin dev.yourinitials.script-what-change-you-made
+%.submit a pull request & merge to main
 
 ## History
 
@@ -31,7 +33,10 @@ Last major edits were done in October 2024.
 
 ## Credits
 
-Katrina, Kayla, Meghan and Ramona. October 2024.
+Katrina Mcadams
+Kayla Cooper
+Meghan Damen
+Ramona Lozon
 
 ## license
 
