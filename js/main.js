@@ -116,3 +116,23 @@ setInterval(() => {
   changeTestSlide(1);
 }, 8000); // Adjust the timing as needed
 
+//--------scroll button javascript!!----------------//
+let btn= document.getElementById("scrollToTopBtn");
+
+window.onscroll=function () {
+  if (document.body.scroolTop > 200 || document.documentElement.scrollTop > 200)
+    btn.style.display="block";
+ else {
+  btn.style.display="none";
+}
+};
+
+function scrollToTop(){
+  console.log("scroll up button clicked");
+  window.scrollTo({
+    top:0,
+    behavior: "smooth"
+  })
+}
+
+btn.addEventListener('click', scrollToTop);
