@@ -82,3 +82,37 @@ document.addEventListener('keydown', (e) => {
     changeSlide(-1); // Previous slide
   }
 });
+
+
+// Testimonial carousel configuration
+let currentTestSlide = 0;
+const testSlides = document.querySelectorAll(".carousel-item-test");
+
+function showTestSlide(index) {
+  testSlides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) {
+      slide.classList.add("active");
+    }
+  });
+}
+
+// Function to change slides
+function changeTestSlide(direction) {
+  currentTestSlide += direction;
+  if (currentTestSlide < 0) {
+    currentTestSlide = testSlides.length - 1;
+  } else if (currentTestSlide >= testSlides.length) {
+    currentTestSlide = 0;
+  }
+  showTestSlide(currentTestSlide);
+}
+
+// Show the first testimonial slide on page load
+showTestSlide(currentTestSlide);
+
+// Automatically change the testimonial slide every 5 seconds
+setInterval(() => {
+  changeTestSlide(1);
+}, 5000); // Adjust the timing as needed
+
